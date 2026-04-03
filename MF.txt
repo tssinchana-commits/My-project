@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><mxfile host="app.diagrams.net">
+  <diagram name="Wireframe" id="w1">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" /><!-- Main Page Container -->
+    <mxCell id="mainPage" value="Main Page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="20" y="20" width="800" height="600" as="geometry" />
+    </mxCell>
+
+    <!-- Main Page Header -->
+    <mxCell id="header" value="Header: Logo | Customer | Account | KYC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DDDDDD;strokeColor=#000000;" vertex="1" parent="mainPage">
+      <mxGeometry x="0" y="0" width="800" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Main Page Sidebar -->
+    <mxCell id="sidebar" value="Sidebar: Quick Links" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#000000;" vertex="1" parent="mainPage">
+      <mxGeometry x="0" y="50" width="150" height="550" as="geometry" />
+    </mxCell>
+
+    <!-- Main Page Body -->
+    <mxCell id="body" value="Dashboard Widgets" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="mainPage">
+      <mxGeometry x="150" y="50" width="650" height="550" as="geometry" />
+    </mxCell>
+
+    <!-- Customer Page Container -->
+    <mxCell id="customerPage" value="Customer Page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="850" y="20" width="800" height="600" as="geometry" />
+    </mxCell>
+
+    <!-- Customer Page Table -->
+    <mxCell id="customerTable" value="Customer Table: Name | Email | Phone | Actions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="customerPage">
+      <mxGeometry x="0" y="50" width="800" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- Account Page Container -->
+    <mxCell id="accountPage" value="Account Page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="20" y="650" width="800" height="600" as="geometry" />
+    </mxCell>
+
+    <!-- Account Page Table -->
+    <mxCell id="accountTable" value="Account Table: Number | Holder | Branch | Status | Actions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="accountPage">
+      <mxGeometry x="0" y="50" width="800" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- KYC Page Container -->
+    <mxCell id="kycPage" value="KYC Page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="850" y="650" width="800" height="600" as="geometry" />
+    </mxCell>
+
+    <!-- KYC Form -->
+    <mxCell id="kycForm" value="KYC Form:\n- Account Dropdown\n- Photo Upload\n- Aadhaar Number\n- PAN Number\n- Submit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="kycPage">
+      <mxGeometry x="0" y="50" width="800" height="500" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
+
+  </diagram>
+</mxfile>

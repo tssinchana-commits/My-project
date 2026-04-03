@@ -1,0 +1,124 @@
+Customer lifecycle workflow:
+
+Status transitions will be controlled using enum-based state management.
+Each role (Representative, Verification, Manager) can perform only allowed transitions.
+This ensures controlled progression and auditability.
+
+Representative -> Verification Team -> Manager
+(Create)	   (Approve)		(Final Approve)
+
+
+Customer Status Lifecycle:
+
+
+
+SUBMITTED
+VERIFIED
+REJECTED 
+MANAGER_REJECTED
+ACTIVE        ------------------- create as public enum Customerstatus class
+
+
+Define Roles:
+
+ROLE_ADMIN
+ROLE_REPRESENTATIVE
+ROLE_VERIFICATION
+ROLE_MANAGER
+
+These comes from Spring Security
+
+
+Define Action for each role:
+
+Now we define permissions:
+Role				Action Allowed
+
+Representative			Create, Edit (Before submit)
+Verification			Approve / Reject
+Manager				Final Approve
+Admin				Everything
+
+
+WorkFlow Logic (Business Rules):
+
+1️.Representative
+Can create customer
+  *Initial status = DRAFT
+  *When ready → change to SUBMITTED
+
+2️.Verification Team
+Can see only SUBMITTED
+Can:
+  *Approve → change to VERIFIED
+  *Reject → change to REJECTED
+
+3️.Manager
+Can see only VERIFIED
+Can:
+ *Approve → ACTIVE
+ *Reject → MANAGER_REJECTED
+
+How to implement in your project:
+
+CustomerController.java
+
+public void updateStatus(Long customerId, CustomerStatus newStatus, String role)
+if(role.equals("REPRESENTATIVE") && newStatus == CustomerStatus.SUBMITTED) {
+    customer.setStatus(CustomerStatus.SUBMITTED);
+}
+
+else if(role.equals("VERIFICATION") && newStatus == CustomerStatus.VERIFIED) {
+    customer.setStatus(CustomerStatus.VERIFIED);
+}
+
+else if(role.equals("MANAGER") && newStatus == CustomerStatus.ACTIVE) {
+    customer.setStatus(CustomerStatus.ACTIVE);
+}
+
+else {
+    throw new RuntimeException("Unauthorized status change");
+}
+
+Database Changes:
+
+createdBy
+verifiedBy
+approvedBy
+verifiedAt
+approvedAt
+remarks
+
+UI Changes(Frontend):
+
+Each role sees different buttons:
+
+Representative sees:
+Save
+Submit
+
+Verification sees:
+Approve
+Reject
+
+Manager sees:
+Final Approve
+Reject
+
+You can filter customers by status in API.
+
+Full Workflow Diagram
+
+REPRESENTATIVE
+    ↓ (Submit)
+SUBMITTED
+    ↓ (Verify)
+VERIFIED
+    ↓ (Manager Approve)
+ACTIVE
+
+If rejected at any stage → goes back with remarks.
+
+
+
+
