@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.main-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.header-title {
+  background-color:  #1e3c72;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 12px;
+  width: 80%;
+  text-align: center;
+}
+
+.page-content {
+  width: 100%;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 30px;
+}
+
+.sub-header {
+  margin-top: 20px;
+  color: white;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.top-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.add-btn {
+  padding: 5px 10px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #16325c;
+}
+
+.customer-row {
+  position: relative;
+}
+
+.actions {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.customer-row:hover .actions {
+  opacity: 1;
+}
+
+.edit-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.customer-table {
+  width: 100%;
+  margin: 80px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.customer-table th {
+  background: #1e3c72;
+  color: white;
+  padding: 15px;
+  
+}
+
+.customer-table td {
+  padding: 15px;
+}
+
+.row-click:hover {
+  background: #cce7ff;
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.details-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.details-card input,
+.details-card select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
